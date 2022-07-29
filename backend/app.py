@@ -62,10 +62,10 @@ def health_check():
 
 
 with app.app_context():
-    dalle_model = DalleModel(args.model_version)
+    dalle_model = DalleModel("Mega_full")
     dalle_model.generate_images("warm-up", 1)
     print("--> DALL-E Server is up and running!")
-    print(f"--> Model selected - DALL-E {args.model_version}")
+    print(f"--> Model selected - DALL-E Mega_full")
 
 
 if __name__ == "__main__":
