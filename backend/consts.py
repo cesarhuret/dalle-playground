@@ -17,8 +17,3 @@ GEN_TOP_K = None
 GEN_TOP_P = None
 TEMPERATURE  = None
 COND_SCALE = 10.0
-
-class ModelSize(Enum):
-    MINI = "Mini"
-    MEGA = "Mega"
-    MEGA_FULL = "Mega_full"
