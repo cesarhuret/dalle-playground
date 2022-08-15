@@ -16,7 +16,7 @@ from flax.training.common_utils import shard_prng_key
 
 import wandb
 
-from consts import COND_SCALE, DALLE_COMMIT_ID, DALLE_MODEL_MEGA_FULL, GEN_TOP_K, GEN_TOP_P, TEMPERATURE, VQGAN_COMMIT_ID, VQGAN_REPO
+from consts import COND_SCALE, DALLE_COMMIT_ID, DALLE_MODEL_MEGA, GEN_TOP_K, GEN_TOP_P, TEMPERATURE, VQGAN_COMMIT_ID, VQGAN_REPO
 
 os.environ["XLA_PYTHON_CLIENT_ALLOCATOR"] = "platform" # https://github.com/saharmor/dalle-playground/issues/14#issuecomment-1147849318
 os.environ["WANDB_SILENT"] = "true"
@@ -46,7 +46,7 @@ def p_decode(vqgan, indices, params):
 
 class DalleModel:
     def __init__(self) -> None:
-        dalle_model = DALLE_MODEL_MEGA_FULL
+        dalle_model = DALLE_MODEL_MEGA
         dtype = jnp.float16
             
         # Load dalle-mini
